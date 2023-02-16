@@ -1,6 +1,6 @@
 #include "env.h"
 
-//Env::Env(Env* n) : prev(n) {}
+Env::Env(Env* n) : prev(n) {}
 
 Env::~Env() {
     for(auto iter = table.begin(); iter != table.end(); iter++) {

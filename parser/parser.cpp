@@ -2,7 +2,11 @@
 #include <string>
 
 Parser::Parser(Lexer& l) : lex(l), look(NULL) { move(); }
-Parser::~Parser() { delete Stmt::Null; }
+Parser::~Parser() { 
+    if (Stmt::Null) delete Stmt::Null;
+    if (Constant::True) delete Constant::True;
+    if (Constant::False) delete Constant::False;
+}
 
 void Parser::move() { look = lex.scan(); }
 

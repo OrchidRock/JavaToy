@@ -13,8 +13,7 @@ private:
 protected:
     Env* prev;
 public:
-    Env() {};
-    Env(Env* n) : prev(n) {}
+    Env(Env* n);
     ~Env();
     
     void put(Token* w, Id* i);//{table.insert(envHashTable::value_type(w, i));}

@@ -9,13 +9,14 @@ class Node {
 public:
     int lexline = 0;
     Node();
+    virtual ~Node() {}
     void error(std::string s);
 
     static int labels;
     
     int newlabel();
     void emitlabel(int i);
-    void emit(std::string s);
+    virtual void emit(std::string s);
 };
 
 

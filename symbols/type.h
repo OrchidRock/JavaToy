@@ -9,8 +9,8 @@ public:
     Type(std::string s, int tag, int w);
     Type(Type* other);
 
-    static bool numeric(Type& p);
-    static Type* max(Type& p1, Type& p2);
+    static bool numeric(Type* p);
+    static Type* max(Type* p1, Type* p2);
     
     static Type* Int;
     static Type* Float;
